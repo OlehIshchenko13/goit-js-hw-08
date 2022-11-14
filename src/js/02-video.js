@@ -16,6 +16,9 @@ const iframe = document.querySelector('iframe');
        localStorage.setItem("videoplayer-current-time",data.seconds)
     },1000));
 	const currentTime = Number(load("videoplayer-current-time"))
-
+  
+  if (localStorage.getItem('videoplayer-current-time') !== null) {
     player.setCurrentTime(currentTime).then(function (seconds) {})
+  }
+    
 	
